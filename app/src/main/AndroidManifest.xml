@@ -10,12 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".BaseActivity"></activity>
-
-        <activity android:name=".ForthActivity" android:launchMode
-            ="singleInstance" android:taskAffinity="com.ed" />
+        <activity android:name=".ForthActivity"  />
         <activity android:name=".ThirdActivity"  />
         <activity android:name=".SecondActivity" />
-        <activity android:name=".FirstActivity" >
+        <activity android:name=".FirstActivity" android:launchMode="singleTask" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

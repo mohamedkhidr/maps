@@ -45,7 +45,9 @@ public class ForthActivity extends AppCompatActivity {
         btnFirstActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ForthActivity.this, FirstActivity.class));
+                Intent intent = new Intent(ForthActivity.this, FirstActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP); // equals single task not like the DOCS
+                startActivity(intent);
             }
         });
         btnSecondActivity.setOnClickListener(new View.OnClickListener() {
